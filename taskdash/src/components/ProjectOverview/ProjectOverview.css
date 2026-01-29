@@ -1,0 +1,162 @@
+.project-card {
+  /* width: 340px; */
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.status-pill {
+  background: #22c55e;
+  color: black;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+
+.section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 12px;
+  color: #8b8fae;
+  margin-bottom: 10px;
+}
+
+.members {
+  display: flex;
+  align-items: center;
+}
+
+.members img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: -8px;
+  border: 2px solid #fff;
+}
+
+.more {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.stats h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.stats span {
+  font-size: 12px;
+  color: #8b8fae;
+}
+
+
+.progress-bar {
+  height: 8px;
+  background: #eef0ff;
+  border-radius: 999px;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  width: 25%;
+  height: 100%;
+  background: #22c55e;
+  border-radius: 999px;
+}
+
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.pie {
+  width: 140px;
+  height: 140px;
+  transform: rotate(-90deg);
+}
+
+.slice {
+  fill: none;
+  stroke-width: 32;
+  stroke-dasharray: 25 75;
+}
+
+.active { stroke: #fbbf24; }
+.done-late { stroke: #67d1d8; stroke-dashoffset: -25; }
+.done-time { stroke: #4f46e5; stroke-dashoffset: -50; }
+.overdue { stroke: #fb7185; stroke-dashoffset: -75; }
+
+
+.legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 13px;
+  color: black;
+}
+
+.dot::before {
+  content: "●";
+  margin-right: 6px;
+}
+
+.dot.active::before { color: #fbbf24; }
+.dot.late::before { color: #67d1d8; }
+.dot.ontime::before { color: #4f46e5; }
+.dot.overdue::before { color: #fb7185; }
+
+
+.task-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.task-my {
+  width: 40%;
+  background: #4f46e5;
+}
+
+.task-member {
+  width: 60%;
+  background: #fb7185;
+}

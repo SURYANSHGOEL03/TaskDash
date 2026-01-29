@@ -1,0 +1,117 @@
+.today-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+
+.today-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.today-header h3 {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.add-task {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 12px;
+}
+
+.task-row:hover {
+  background: #f6f7fb;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.task-title {
+  font-size: 14px;
+  color: #374151;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.badge {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.badge-red {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.badge-yellow {
+  background: #fef3c7;
+  color: #f59e0b;
+}
+
+
+.task-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.date-red {
+  color: #ef4444;
+}
+
+.assignee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assignee img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.assignee span {
+  font-size: 13px;
+  color: #374151;
+}
+
+.star {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.star:hover {
+  opacity: 1;
+}

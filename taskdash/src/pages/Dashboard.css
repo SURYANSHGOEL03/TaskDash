@@ -1,0 +1,43 @@
+
+.dashboard-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+.dashboard-body {
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dashboard-content {
+
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-grid {
+  
+  /* max-width: 1400px; */
+  display: grid;
+  overflow: hidden;
+
+  grid-template-columns: 15% 55% 30% ;
+  gap: 12px;
+  /* background-color: red; */
+}
+
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+
+
+
