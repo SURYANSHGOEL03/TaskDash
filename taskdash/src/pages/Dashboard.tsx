@@ -2,43 +2,52 @@ import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Navbar/Sidebar/Sidebar";
 
 import TodayTasks from "../components/TodayTasks/TodayTask";
-// import OverdueTasks from "../components/OverdueTasks/OverdueTask";
-import OverdueTasks from "../components/OverdueTask/OverdueTask";
+import UpcomingTasks from "../components/UpcomingTasks/UpcomingTask";
 import ProjectOverview from "../components/ProjectOverview/ProjectOverview";
 
 import "./Dashboard.css";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+
+  const addTask = () => {
+    if (!title || !date) return;
+
+    setTasks(prev => [
+      ...prev,
+      {
+        id: Date.now(),
+        title,
+        date,
+        assignee: "You",
+      },
+    ]);
+
+    setTitle("");
+    setDate("");
+  };
   return (
     <>
-     {/* <div className="dashboard-page"> */}
-      
-      {/* <Sidebar /> */}
+      <Navbar />
 
-      
-      {/* <div className="dashboard-body"> */}
-      
-        <Navbar />
+      <div className="dashboard-grid">
+        
+        <Sidebar />
 
-         {/* <Sidebar /> */}
+       
+        <div className="dashboard-main">
+          <TodayTasks />
+          <UpcomingTasks />
+        </div>
 
-        {/* <div className="dashboard-content"> */}
-          <div className="dashboard-grid">
-
-            <Sidebar />
-            
-            <div className="dashboard-main">
-              <TodayTasks />
-              <OverdueTasks />
-            </div>
-
-            <div className="dashboard-side">
-              <ProjectOverview />
-            </div>
-          </div>
-        {/* </div> */}
-      {/* </div> */}
-     {/* </div> */}
+       
+        <div className="dashboard-side">
+          <ProjectOverview />
+        </div>
+      </div>
     </>
   );
 };

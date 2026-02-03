@@ -21,13 +21,13 @@
 
 .dashboard-grid {
   
-  /* max-width: 1400px; */
+
   display: grid;
   overflow: hidden;
 
   grid-template-columns: 15% 55% 30% ;
   gap: 12px;
-  /* background-color: red; */
+ 
 }
 
 

@@ -1,4 +1,4 @@
-import './Nabbar.css';
+import './Navbar.css';
 import { FiSearch, FiHelpCircle, FiSettings } from "react-icons/fi";
 
 const Navbar = () => {
@@ -16,6 +16,7 @@ const Navbar = () => {
       </nav>
 
       <div className="navbar-right">
+        
         <FiSearch />
         <FiHelpCircle />
         <FiSettings />
@@ -25,3 +26,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
